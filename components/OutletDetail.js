@@ -8,18 +8,18 @@ export default function OutletDetail({ openOutletDetail, setOpenOutletDetail }) 
     return (
         <div className={`overflow-auto top-0 space-y-12 px-6 pt-12 bottom-0 right-0 fixed w-[35vw] h-full bg-white ease-in-out z-50 duration-300 ${openOutletDetail ? "translate-x-0 " : "translate-x-full"}`}>
             <div className="relative outline outline-offset-2 outline-slate-200 rounded-lg">
-                <button onClick={(e) => { setOpenOutletList(!openOutletList) }} className="justify-between w-full text-black font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" type="button">
-                    <div className="flex gap-x-2">
+                <div onClick={(e) => { setOpenOutletList(!openOutletList) }} className="w-full text-black font-medium rounded-lg text-sm px-4 py-2.5 text-center items-center" type="button">
+                    <div className="flex w-full gap-x-2">
                         <svg className="text-slate-400 h-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
                         </svg>
-                        <b>Outlet</b>
+                        <input type="text" className="grow w-full outline-none" placeholder="Outlet" />
+                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
                     </div>
 
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
+                </div>
                 <div className={`${openOutletList ? 'opacity-100 scale-100' : 'opacity-0 scale-95 -z-50'} ease-in duration-300 absolute top-7 right-0 w-full bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4`}>
                     <div className="px-4 py-3">
                         <span className="block text-sm">STRO</span>

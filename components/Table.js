@@ -7,7 +7,7 @@ function GetSelectWithLabel({ label, list }) {
     return (
         <div className="flex gap-x-2">
             <span className="my-auto text-sm">{label}</span>
-            <select className="border-2 rounded-lg h-full p-2">
+            <select className="border-2 rounded-lg h-full p-2 outline-none">
                 {list.map(item => {
                     return (<option>{item}</option>)
                 })}
@@ -40,7 +40,7 @@ function GenerateTableRows({ onclickMenu }) {
                 {DummyTableDataRow.VAO}
             </th>
             <th onClick={(e) => { onclickMenu() }} className="cursor-pointer px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path></svg>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path></svg>
             </th>
 
         </tr>);
@@ -52,7 +52,7 @@ export default function Table() {
     const [openOutletDetail, setOpenOutletDetail] = React.useState(false);
     return (
         <>
-            <div className="container shadow-md p-4 bg-white">
+            <div className="shadow-md p-4 bg-white">
                 <div className="flex flex-row justify-between py-2 grow-0">
                     <Searchfield />
                     <div className="flex flex-row gap-x-2">
@@ -62,7 +62,6 @@ export default function Table() {
                             + Add New Component
                         </button>
                     </div>
-
                 </div>
                 <table className="items-center w-full bg-transparent border-collapse">
                     <thead>
@@ -106,7 +105,7 @@ export default function Table() {
                                 className="relative inline-flex items-center px-2 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                             >
                                 <span className="sr-only">Previous</span>
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
                             </a>
                             {/* Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" */}
                             <a
@@ -139,7 +138,7 @@ export default function Table() {
                                 className="relative inline-flex items-center px-2 py-2 rounded-r-md border rounded-md border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                             >
                                 <span className="sr-only">Next</span>
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
                             </a>
                         </nav>
                     </div>
